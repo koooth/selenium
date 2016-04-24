@@ -31,9 +31,9 @@ public class Login {
         return _driver.findElement(greenMessage).isDisplayed();
     }
 
-    public void runAll(){
-        setLogin("tomsmith");
-        setPassword("SuperSecretPassword!");
+    public void runAll(String loginvalue, String passwordvalue){
+        setLogin(loginvalue);
+        setPassword(passwordvalue);
         clickLogin();
         Assert.assertTrue(isLogged());
     }
